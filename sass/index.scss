@@ -1,0 +1,314 @@
+
+@import 'base.scss';
+
+/* 首页banner */
+.bannerBox{
+  min-width: 1200px;
+  width: 100%;
+  height:525px;
+  margin: auto;
+  overflow:hidden;
+  position:relative;
+  & > .hd{
+    width: 100%;
+    height: 40px;
+    overflow:hidden;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    z-index:1;
+    text-align: center;
+    ul{
+      zoom:1;
+      li{
+        display: inline-block;
+        *display:inline;
+        zoom:1;
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 5px 15px 0 0;
+        border-radius: 50%;
+        background: #222;
+        opacity: .8;
+        color: #fff;
+        box-shadow: 0 0 5px;
+        line-height: 22px;
+        cursor: pointer;
+        &.on{
+          background:$color;
+          color:#fff;
+        }
+      }
+    }
+  }
+  & > .bd{
+    position:relative;
+    height:100%;
+    z-index:0;
+    li{
+      zoom:1;
+      vertical-align:middle;
+      height:525px;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+.slae{
+  width: 100%;
+  @extend %pa;
+  top: 3px;
+  left: 0;
+  .slae_b{
+    margin-top: 12px;
+  }
+  .slae_buy{
+    width: 208px;
+    height: 228px;
+    @extend %pa,%ffst;
+    @include border;
+    background: #fff;
+    right: 0;
+    bottom: 0;
+    .slae_buy_t{
+      @include bor(bottom);
+      height: 34px;
+      line-height: 34px;
+      @include fz(14px);
+      padding-left: 20px;
+      color: #333;
+      background: #fafafa;
+    }
+  }
+}
+
+.txtScroll-top {
+  overflow: hidden;
+  position: relative;
+  .txthd {
+    overflow: hidden;
+    height: 26px;
+    line-height: 26px;
+    background: #fafafa;
+    em{
+      padding:0 2%;
+      color: #333;
+      @extend %inline;
+      @include align;
+      float: left;
+    }
+  }
+  .txtbd{
+    line-height: 26px;
+    margin-top: 6px;
+    li{
+      height: 26px;
+      overflow: hidden;
+    }
+    span{
+      overflow: hidden;
+      padding:0 2%;
+      @include align;
+      float: left;
+    }
+  }
+  .infoList_hy{
+    width: 18%;
+  }
+  .infoList_mc{
+    width: 46%;
+  }
+  .infoList_jg{
+    width: 21%;
+  }
+}
+
+.content_t{
+  width: 100%;
+  @extend %minw;
+  background: url(../images/pic_13.png) no-repeat center top;
+}
+
+/* 首页楼层 */
+.floors{
+  background: #fff;
+  .floors_t{
+    height: 34px;
+    line-height: 34px;
+    overflow: hidden;
+    margin-top: 10px;
+    border-bottom: 2px solid $color;
+    .floors_tl{
+      @extend %fl;
+      i{
+        @extend %ffar,%inline;
+        @include fz(22px);
+        color: #333;
+        vertical-align: middle;
+        margin-top: 4px;
+        padding: 0 5px;
+      }
+      em{
+        @include fz(18px);
+        @extend %inline;
+        color: #333;
+        vertical-align: middle;
+        width: 157px;
+      }
+      span{
+        @extend %inline,%ffst;
+        vertical-align: middle;
+        background: $color;
+        color: #fff;
+        padding: 0 25px;
+        @include fz(14px);
+      }
+    }
+    .floors_tr{
+      @extend %fr,%ffst;
+      span{
+        @extend %inline;
+        padding:0 8px 0 12px;
+        @include bor(left,#e3dde3);
+        height: 12px;
+        line-height: 1;
+        &:first-child{
+          border-left: none;
+        }
+      }
+      .more{
+        height: 20px;
+        line-height: 20px;
+        background: $color;
+        color: #fff;
+        @extend %inline;
+        padding: 0 10px;
+        margin-right: 7px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .floors_c{
+    .floors_cl{
+      width: 16.25%;
+      @include border;
+      @extend %fl;
+      .floors_ad{
+        width: 195px;
+        height: 271px;
+        overflow: hidden;
+        img{
+          @extend %w100;
+        }
+      }
+      .floors_cls{
+        width: 100%;
+        height: 140px;
+        overflow: hidden;
+        padding: 10px 15px;
+        line-height: 26px;
+        @extend %ffst;
+        li{
+          margin-right: 30px;
+          float: left;
+          a{
+            color: #333;
+            &:hover{
+              color: $color;
+            }
+          }
+        }
+      }
+      .floors_pro{
+        width: 170px;
+        margin: auto;
+        height: 77px;
+        @include bor(top);
+        line-height: 25px;
+        padding: 5px 0;
+        a{
+          color: #333;
+        }
+        i{
+          @extend %inline,%icon;
+          width: 10px;
+          height: 12px;
+          background-position: 0 -59px;
+          vertical-align: middle;
+        }
+        em{
+          vertical-align: middle;
+          color: #333;
+          @include fz(14px);
+        }
+        p{
+          padding:0 5px;
+          @extend %nowrap,%ffst;
+        }
+      }
+    }
+    .floors_cr{
+      width: 83.4%;
+      @extend %fr;
+    }
+  }
+  .floors_list{
+    @include bor(bottom);
+    li{
+      width: 200px;
+      height: 260px;
+      float: left;
+      overflow: hidden;
+      .floors_wrap{
+        @include border;
+        margin: 0 0 -1px -1px;
+      }
+      .floors_img{
+        width: 176px;
+        height: 176px;
+        margin: auto;
+        overflow: hidden;
+        img{
+          @extend %w100;
+        }
+      }
+      .floors_txt{
+        padding:10px 20px 5px;
+        height: 34px;
+        overflow: hidden;
+        @extend %ffst;
+        line-height: 1.5;
+      }
+      .floors_pri{
+        padding: 5px 20px 10px;
+        color: $color;
+        @extend %inline;
+        @include fz(14px);
+        i{
+          @include fz;
+        }
+      }
+    }
+  }
+  .floors_item{
+    @include border;
+    margin-top: 12px;
+    height: 88px;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+}
+
