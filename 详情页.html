@@ -3391,7 +3391,8 @@
                                 <div class="clear">
                                 </div>
                             </div>
-
+                            <div class="attrEmpty">请选择详细的商品信息</div>
+                            <!-- 选择颜色 -->
                             <div class="spec choose">
                                 <div class="dt">
                                     <span class="">
@@ -3399,7 +3400,7 @@
                                     </span>
                                 </div>
                                 <div class="dd">
-                                    <div class="item selected" data-value="42:124">
+                                    <div class="item" data-value="42:124">
                                       <b></b>
                                       <a href="#none" title="白色">
                                           <img data-img="1" src="http://img11.360buyimg.com/n9/jfs/t532/57/980371155/284290/bde20406/549fdbd2Nb91a3afa.jpg" width="25" height="25" alt="白色">
@@ -3422,7 +3423,7 @@
                                     </span>
                                 </div>
                                 <div class="dd">
-                                   <div class="item selected" data-value="43:124">
+                                   <div class="item" data-value="43:124">
                                         <b></b>
                                         <a href="javascript:;" title="M" style="background:">M</a>
                                     </div>
@@ -3433,56 +3434,32 @@
                                 </div>
                             </div>
 
+
+                            <!-- 选择规格 -->
+                            <div class="spec choose">
+                                <div class="dt">
+                                    <span class="">
+                                        规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：
+                                    </span>
+                                </div>
+                                <div class="dd">
+                                   <div class="item" data-value="44:124">
+                                        <b></b>
+                                        <a href="javascript:;" title="M" style="background:">瓶</a>
+                                    </div>
+                                    <div class="item " data-value="44:125">
+                                        <b></b>
+                                        <a href="javascript:;" title="L" style="background:">箱</a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <script type="text/javascript">
-                              $(function(){
-                                var val,url;
-                                $(".choose .item").on('click', function(event) {
-                                  $(this).addClass('selected').siblings('.item').removeClass('selected');
-                                  var spec = [];
-                                  for(var i = 0; i < $(".spec").length; i++){
-                                    // spec = '.yd_' + val;
-                                    val = $(".spec").eq(i).find('.selected').data('value');
-                                    // spec = spec + '_' + val;
-                                    spec.push(val);
-                                  }
-                                  url = $("#setImg li[data-key='" + spec + "']").children('.img').val();
-                                  $(".jqzoom").attr('src', url);
-
-                                  var dv = $(this).data('value');
-
-                                  //alert(String($("#setImg li[data-key='" + spec + "']")))
-                                  /*if(!($("#setImg li[data-key='" + spec + "']").length > 0)){
-                                    alert(1)
-                                  }*/
-
-                                    var arr = [];
-                                    $("#setImg li[data-key*='" + dv + "']").each(function(index, el) {
-                                        arr.push($(this).data('key'));
-                                    });
-                                    var oArr = [];
-                                    oArr = arr.join(',');
-                                    oa = oArr.split(',');
-
-                                    /*console.log(oa);
-                                    console.log(dv);
-                                    console.log($.inArray(dv, oa));*/
-                                    $(".spec .item").each(function(i, el) {
-                                        var dval = $(this).data('value');
-                                        if($.inArray(dval, oa) !== '-1'){
-                                            console.log($.inArray(dval, oa));
-                                        }
-                                    });
-
-                                });
-
-
-
-
-                              })
+                            $(function(){var b,a;$(".spec").on("click",".item:not(.sold-out)",function(h){$(".attrEmpty").hide();$(this).toggleClass("selected").siblings(".item").removeClass("selected");var d=[];for(var g=0;g<$(".spec").length;g++){b=$(".spec").eq(g).find(".selected").data("value");d.push(b)}a=$("#setImg li[data-key='"+d+"']").children(".img").val();$(".jqzoom").attr("src",a);var f=$(this).data("value");var c=[];$("#setImg li[data-key*='"+f+"']").each(function(i,j){c.push($(this).data("key"))});var e=[];e=c.join(",");oa=e.split(",");$(".spec .item").removeClass("sold-out");$(this).parents(".spec").siblings(".spec").find(".item").each(function(j,k){var l=$(this).data("value");if($.inArray(l,oa)=="-1"){$(this).addClass("sold-out")}})});$(".buyNub-buy").on("click",".u-buy",function(c){$(".spec").each(function(d,e){var g=$(".spec").eq(d);var f=g.find(".selected").length;if(!f){$(".attrEmpty").show()}})})});
                             </script>
 
                             <ul id="setImg">
-                                <li data-key="42:124,43:124">
+                                <li data-key="42:124,43:124,44:125">
                                     <input type="hidden" class="sku_id" value="181">
                                     <input type="hidden" class="img" value="http://gi2.md.alicdn.com/bao/uploaded/i2/T1gVXTFndfXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg">
                                     <input type="hidden" class="price" value="100.00">
@@ -3490,7 +3467,7 @@
                                     <input type="hidden" class="stock" value="5">
                                 </li>
 
-                                <li data-key="42:124,43:125">
+                                <li data-key="42:124,43:125,44:124">
                                     <input type="hidden" class="sku_id" value="181">
                                     <input type="hidden" class="img" value="http://gi2.md.alicdn.com/imgextra/i2/324478653/TB269AkXVXXXXbzXXXXXXXXXXXX_!!324478653.jpg_430x430q90.jpg">
                                     <input type="hidden" class="price" value="100.00">
@@ -3498,7 +3475,7 @@
                                     <input type="hidden" class="stock" value="5">
                                 </li>
 
-                                <li data-key="42:125,43:124">
+                                <li data-key="42:125,43:124,44:125">
                                     <input type="hidden" class="sku_id" value="181">
                                     <input type="hidden" class="img" value="http://gi3.md.alicdn.com/imgextra/i3/324478653/TB2DuAkXVXXXXazXXXXXXXXXXXX_!!324478653.jpg_430x430q90.jpg">
                                     <input type="hidden" class="price" value="100.00">
@@ -3561,8 +3538,8 @@
                         </div>
                         <div class="depict-other">
                             <div class="other-payment">
-                                分享到：
-                                <div class="bshare-custom" style="float:none;margin-top:5px">
+                                <div class="fl">分享到：</div>
+                                <div class="bshare-custom" style="margin-top:5px">
                                     <div class="bsPromo bsPromo2">
                                     </div>
                                     <a title="分享到QQ空间" class="bshare-qzone">

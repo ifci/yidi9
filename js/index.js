@@ -244,8 +244,8 @@ $(function(){
         $(this).children('.rank-unfold').show().siblings().hide();
         $(this).siblings('li').children('.rank-unfold').hide().siblings().show();
     });
-    $(".choose .item").on('click', function(event) {
+    /*$(".choose .item").on('click', function(event) {
 		$(this).addClass('selected').siblings('.item').removeClass('selected');
-	});
+	});*/
 });
 

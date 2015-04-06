@@ -164,7 +164,7 @@
   position: absolute;
   width: 150px;
   left: 210px;
-  top: 20px;
+  top: 22px;
   height: 48px;
   cursor: pointer;
   border: 1px solid #eee;
@@ -251,13 +251,13 @@
 }
 
 .depict-name {
-  padding: 15px 10px 8px 10px;
+  padding: 0 10px;
   font-family: "microsoft yahei";
   h3 {
     max-height: 60px;
     font-size: 20px;
     color: #333;
-    line-height: 36px;
+    line-height: 1.2;
     font-family: "microsoft yahei";
     font-weight: normal;
   }
@@ -332,7 +332,7 @@
 }
 
 .dPrice-mark {
-  padding: 10px 0 8px;
+  // padding: 10px 0 8px;
   del {
     font-family: "microsoft yahei";
     color: #999;
@@ -386,7 +386,7 @@
 /* .dPrice-pri .pri i{ padding-left:15px; font-size:14px; position:relative; top:1px;}*/
 
 .dPrice-pricing {
-  padding: 0 0 8px 0;
+  // padding: 0 0 8px 0;
   .pricing-tit {
     float: left;
     height: 17px;
@@ -626,10 +626,11 @@
 /*订单信息*/
 
 .depict-order {
-  padding: 15px 10px;
+  padding: 10px 10px 0 10px;
   border-bottom: 1px solid #eeeeee;
   border-top: 1px solid #eeeeee;
   background: #fafafa;
+  margin-top: 6px;
 }
 
 .dOrder-city {
@@ -857,7 +858,7 @@
   position: relative;
   z-index: 2;
   height: 48px;
-  margin: 21px 10px;
+  margin: 22px 10px;
   .u-buy, .u-buy-orderbuy {
     display: block;
     width: 172px;
@@ -1208,8 +1209,8 @@ div.buyNub-buy-wrap3 {
 /*.depict-other{ padding:0 10px;}*/
 
 .other-payment {
-  height: 18px;
-  line-height: 18px;
+  height: 30px;
+  line-height: 30px;
   padding: 0 10px;
   span {
     display: inline-block;
@@ -4753,4 +4754,21 @@ div {
       padding: 0;
     }
   }
+}
+
+.choose .sold-out{
+  border: 1px dashed #D6D6D8;
+  color: #CDCDCD;
+  // margin: 0;
+  &:hover a{
+    border: none;
+    padding: 2px;
+    cursor: not-allowed;
+  }
+}
+
+.attrEmpty{
+  color: $color;
+  padding-bottom: 5px;
+  // display: none;
 }
