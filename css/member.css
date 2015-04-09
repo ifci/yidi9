@@ -649,7 +649,16 @@ body, .tel, .search .search_sub {
 #top, #header, #content, #footer {
   min-width: 1200px; }
 
-#user-info .info-m .u-rank, #user-info .info-m .u-score, .stepflex dl, .safe-icon-box .m-icon, .safe-icon-box .fore, .sflex .item .label, .wdjf_dt .hd li, .wdjb_ul li {
+.yhq .hd {
+  zoom: 1; }
+  .yhq .hd:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+#user-info .info-m .u-rank, #user-info .info-m .u-score, .stepflex dl, .safe-icon-box .m-icon, .safe-icon-box .fore, .sflex .item .label, .wdjf_dt .hd li, .wdjb_ul li, .yhq .hd li {
   float: left; }
 
 .ydmBar .ydmBar_ac, .ydmBar .ydmBar_cart .ydmBar_cart_con, .ydmBar .ydmBar_tip, .ydmBar .ydmBar_login .ydmBar_login_con, .wdjb_ul {
@@ -3742,5 +3751,47 @@ a.wopj_bt {
 .wdgrow_p i {
   color: #ff000a;
   font-size: 18px; }
+
+/* 优惠券 */
+.yhq {
+  padding-top: 70px; }
+  .yhq .hd li {
+    padding: 5px;
+    margin: 0 5px; }
+    .yhq .hd li.on {
+      border-bottom: 2px solid #ff000a; }
+      .yhq .hd li.on a {
+        color: #ff000a;
+        font-weight: bold; }
+  .yhq .hd a {
+    color: #666; }
+    .yhq .hd a:hover {
+      color: #ff000a; }
+  .yhq .bd table {
+    border-collapse: collapse;
+    border: 1px solid #f5f5f5;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; }
+    .yhq .bd table thead {
+      background: #f5f5f5;
+      color: #333; }
+    .yhq .bd table td {
+      border: 1px solid #f5f5f5;
+      padding: 5px; }
+    .yhq .bd table a {
+      color: #005ea7;
+      line-height: 1.8; }
+      .yhq .bd table a:hover {
+        color: #ff000a; }
+    .yhq .bd table .pri {
+      color: #e4393c;
+      font-weight: bold;
+      font-size: 14px; }
+    .yhq .bd table .xg {
+      color: #999; }
+    .yhq .bd table i {
+      color: #666;
+      font-weight: bold; }
 
 /*# sourceMappingURL=member.css.map */
