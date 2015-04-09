@@ -654,16 +654,16 @@ body, .tel, .search .search_sub {
 #top, #header, #content, #footer {
   min-width: 1200px; }
 
-.news, .news_tit, .detail, .spage .spage_al {
+.news, .news_tit, .detail, .spage .spage_al, .news_nav {
   zoom: 1; }
-  .news:after, .news_tit:after, .detail:after, .spage .spage_al:after {
+  .news:after, .news_tit:after, .detail:after, .spage .spage_al:after, .news_nav:after {
     content: ".";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden; }
 
-.news_l, .news_tit .news_tl, .jrsg_cl, .jrsg_cr, .detail_l, .spage .spage_al .spage_fl {
+.news_l, .news_tit .news_tl, .jrsg_cl, .jrsg_cr, .detail_l, .spage .spage_al .spage_fl, .news_nav li {
   float: left; }
 
 .news_tit .news_tr, .news_r, .detail_r, .spage .spage_al .spage_fr {
@@ -1520,5 +1520,16 @@ table.ab_outer {
       margin-top: 12px; }
   .spage .mt8 {
     margin-top: 6px; }
+
+.news_nav {
+  margin: 20px 20px 0 0;
+  font-size: 14px; }
+  .news_nav li {
+    padding: 5px;
+    margin: 0 5px; }
+    .news_nav li.on {
+      background: #ff000a; }
+      .news_nav li.on a {
+        color: #fff; }
 
 /*# sourceMappingURL=news.css.map */
