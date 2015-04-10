@@ -5,7 +5,7 @@
     <meta name="renderer" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="author" content="JKD TEAM">
-    <title>优惠券</title>
+    <title>兑换优惠券</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="dns-prefetch" href="//apps.bdimg.com">
@@ -3403,302 +3403,213 @@
 
             <!--定义右边栏内容-->
             <div class="member_r fl">
-                <!--全部订单-->
+                <!--兑换优惠券-->
                 <div class="orderArea">
                     <div class="orderTitle">
                         <ul class="tag5">
                             <li class="on"><a href="#">优惠券<b class="top"></b></a></li>
                         </ul>
                     </div>
-                    <div class="yhq">
-                        <div class="hd">
-                            <ul>
-                                <li class="on">
-                                    <a href="#" title="">未使用(3)</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="">已使用(2)</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="">已过期(1)</a>
-                                </li>
-                            </ul>
-                            <div class="add">
-                                <a href="#" title="">使用积分兑换优惠券></a>
+                    <div class="exc">
+                        <!-- 优惠券筛选分类 -->
+                        <div class="exc_t">
+                            <div>
+                                <h3>选择分类：</h3>
+                                <a href="#" title="全部" class="curr">全部</a>
+                                <a href="#" title="意大利红酒">意大利红酒</a>
+                                <a href="#" title="意大利进口皮包">意大利进口皮包</a>
+                                <a href="#" title="意大利进口零食">意大利进口零食</a>
+                            </div>
+
+                            <div>
+                                <h3>排序：</h3>
+                                <a href="#" title="默认" class="curr">默认</a>
+                                <a href="#" title="积分" class="up">积分<i></i></a>
+                                <a href="#" title="上架时间" class="down">上架时间<i></i></a>
+                                <a href="#" title="优惠金额" class="down">优惠金额<i></i></a>
                             </div>
                         </div>
-                        <div class="bd">
-                            <!-- 未使用的优惠券 -->
-                            <div>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <td>面值</td>
-                                            <td>所需消费金额</td>
-                                            <td>使用限制</td>
-                                            <td>有效期</td>
-                                            <td></td>
-                                        </tr>
-                                    </thead>
 
-
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="5">
-                                                <div class="num">编号1060859458</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="pri">￥10.00</div>
-                                            </td>
-                                            <td>
-                                                <div>￥100.00</div>
-                                            </td>
-                                            <td>
-                                                <div class="xg">限购&nbsp;<i>红酒</i>&nbsp;商品</div>
-                                            </td>
-                                            <td>
-                                                <div>2015-04-01至2015-04-16</div>
-                                            </td>
-                                            <td>
-                                                <div class="from">
-                                                    <a href="javascript:">查看来源</a>
-                                                    <span>
-                                                        <i></i>
-                                                        积分兑换
-                                                    </span>
+                        <div class="exc_c">
+                            <!-- 优惠券列表 -->
+                            <ul>
+                                <li>
+                                    <div class="item">
+                                        <div class="item_l">
+                                            <p>意大利红酒专场</p>
+                                            <a href="#" title=""><img src="images/5510d205N0f6cb57b.jpg" alt="" width="130" height="130" /></a>
+                                        </div>
+                                        <div class="item_r">
+                                            <div class="limit">
+                                                <div class="worth">
+                                                    <span class="sign">￥</span>
+                                                    10
                                                 </div>
-                                                <div>
-                                                    <a href="#">去购物></a>
+                                                <div class="ftx-04">满60元可用</div>
+                                                <div class="ftx-03">有效期至2015-04-16 23:59:00</div>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                            <div class="p-change">
+                                                <span class="num">100 </span>积分
+                                                <span class="ext-num ftx-03"><span class="num">16</span>人兑换</span>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                            <div class="p-change-op">
+                                                <a class="btn-3" href="javascript:">立即兑换</a>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 兑换所需积分 -->
+                                    <input type="hidden" id="Integral" value="100" />
+                                    <!-- 优惠券类别 -->
+                                    <input type="hidden" id="Cate" value="意大利红酒" />
+                                    <!-- 面值 -->
+                                    <input type="hidden" id="Par" value="10元" />
+                                    <!-- 使用条件 -->
+                                    <input type="hidden" id="Condition" value="100元" />
+                                    <!-- 使用有效期 -->
+                                    <input type="hidden" id="Valid" value="2015-04-16 23:59:00" />
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="item_l">
+                                            <p>意大利红酒专场</p>
+                                            <a href="#" title=""><img src="images/5510d205N0f6cb57b.jpg" alt="" width="130" height="130" /></a>
+                                        </div>
+                                        <div class="item_r">
+                                            <div class="limit">
+                                                <div class="worth">
+                                                    <span class="sign">￥</span>
+                                                    10
                                                 </div>
-                                                <div class="del">
-                                                    <a href="javascript:">删除</a>
+                                                <div class="ftx-04">满60元可用</div>
+                                                <div class="ftx-03">有效期至2015-04-16 23:59:00</div>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                            <div class="p-change">
+                                                <span class="num">100 </span>积分
+                                                <span class="ext-num ftx-03"><span class="num">16</span>人兑换</span>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                            <div class="p-change-op">
+                                                <a class="btn-3" href="javascript:">立即兑换</a>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 兑换所需积分 -->
+                                    <input type="hidden" id="Integral" value="100" />
+                                    <!-- 优惠券类别 -->
+                                    <input type="hidden" id="Cate" value="意大利红酒" />
+                                    <!-- 面值 -->
+                                    <input type="hidden" id="Par" value="10元" />
+                                    <!-- 使用条件 -->
+                                    <input type="hidden" id="Condition" value="100元" />
+                                    <!-- 使用有效期 -->
+                                    <input type="hidden" id="Valid" value="2015-04-16 23:59:00" />
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="item_l">
+                                            <p>意大利红酒专场</p>
+                                            <a href="#" title=""><img src="images/5510d205N0f6cb57b.jpg" alt="" width="130" height="130" /></a>
+                                        </div>
+                                        <div class="item_r">
+                                            <div class="limit">
+                                                <div class="worth">
+                                                    <span class="sign">￥</span>
+                                                    10
                                                 </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-
-
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="5">
-                                                <div class="num">编号1060859458</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="pri">￥10.00</div>
-                                            </td>
-                                            <td>
-                                                <div>￥100.00</div>
-                                            </td>
-                                            <td>
-                                                <div class="xg">限购&nbsp;<i>红酒</i>&nbsp;商品</div>
-                                            </td>
-                                            <td>
-                                                <div>2015-04-01至2015-04-16</div>
-                                            </td>
-                                            <td>
-                                                <div class="from">
-                                                    <a href="javascript:">查看来源</a>
-                                                    <span>
-                                                        <i></i>
-                                                        积分兑换
-                                                    </span>
+                                                <div class="ftx-04">满60元可用</div>
+                                                <div class="ftx-03">有效期至2015-04-16 23:59:00</div>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                            <div class="p-change">
+                                                <span class="num">100 </span>积分
+                                                <span class="ext-num ftx-03"><span class="num">16</span>人兑换</span>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                            <div class="p-change-op">
+                                                <a class="btn-3" href="javascript:">立即兑换</a>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 兑换所需积分 -->
+                                    <input type="hidden" id="Integral" value="100" />
+                                    <!-- 优惠券类别 -->
+                                    <input type="hidden" id="Cate" value="意大利红酒" />
+                                    <!-- 面值 -->
+                                    <input type="hidden" id="Par" value="10元" />
+                                    <!-- 使用条件 -->
+                                    <input type="hidden" id="Condition" value="100元" />
+                                    <!-- 使用有效期 -->
+                                    <input type="hidden" id="Valid" value="2015-04-16 23:59:00" />
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="item_l">
+                                            <p>意大利红酒专场</p>
+                                            <a href="#" title=""><img src="images/5510d205N0f6cb57b.jpg" alt="" width="130" height="130" /></a>
+                                        </div>
+                                        <div class="item_r">
+                                            <div class="limit">
+                                                <div class="worth">
+                                                    <span class="sign">￥</span>
+                                                    10
                                                 </div>
-                                                <div>
-                                                    <a href="#">去购物></a>
-                                                </div>
-                                                <div class="del">
-                                                    <a href="javascript:">删除</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="5">
-                                                <div class="num">编号1060859458</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="pri">￥10.00</div>
-                                            </td>
-                                            <td>
-                                                <div>￥100.00</div>
-                                            </td>
-                                            <td>
-                                                <div class="xg">限购&nbsp;<i>红酒</i>&nbsp;商品</div>
-                                            </td>
-                                            <td>
-                                                <div>2015-04-01至2015-04-16</div>
-                                            </td>
-                                            <td>
-                                                <div class="from">
-                                                    <a href="javascript:">查看来源</a>
-                                                    <span>
-                                                        <i></i>
-                                                        积分兑换
-                                                    </span>
-                                                </div>
-                                                <div>
-                                                    <a href="#">去购物></a>
-                                                </div>
-                                                <div class="del">
-                                                    <a href="javascript:">删除</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- 已使用的优惠券 -->
-                            <div>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <td>面值</td>
-                                            <td>所需消费金额</td>
-                                            <td>使用限制</td>
-                                            <td>有效期</td>
-                                            <td></td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="5">
-                                                <div class="num">编号1060859458</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="pri">￥10.00</div>
-                                            </td>
-                                            <td>
-                                                <div>￥100.00</div>
-                                            </td>
-                                            <td>
-                                                <div class="xg">限购&nbsp;<i>红酒</i>&nbsp;商品</div>
-                                            </td>
-                                            <td>
-                                                <div>2015-04-01至2015-04-16</div>
-                                            </td>
-                                            <td>
-                                                <div class="from">
-                                                    <a href="javascript:">查看来源</a>
-                                                    <span>
-                                                        <i></i>
-                                                        积分兑换
-                                                    </span>
-                                                </div>
-                                                <div>
-                                                    <a href="#">去购物></a>
-                                                </div>
-                                                <div class="del">
-                                                    <a href="javascript:">删除</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="5">
-                                                <div class="num">编号1060859458</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="pri">￥10.00</div>
-                                            </td>
-                                            <td>
-                                                <div>￥100.00</div>
-                                            </td>
-                                            <td>
-                                                <div class="xg">限购&nbsp;<i>红酒</i>&nbsp;商品</div>
-                                            </td>
-                                            <td>
-                                                <div>2015-04-01至2015-04-16</div>
-                                            </td>
-                                            <td>
-                                                <div class="from">
-                                                    <a href="javascript:">查看来源</a>
-                                                    <span>
-                                                        <i></i>
-                                                        积分兑换
-                                                    </span>
-                                                </div>
-                                                <div>
-                                                    <a href="#">去购物></a>
-                                                </div>
-                                                <div class="del">
-                                                    <a href="javascript:">删除</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- 已过期的优惠券 -->
-                            <div>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <td>面值</td>
-                                            <td>所需消费金额</td>
-                                            <td>使用限制</td>
-                                            <td>有效期</td>
-                                            <td></td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="5">
-                                                <div class="num">编号1060859458</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="pri">￥10.00</div>
-                                            </td>
-                                            <td>
-                                                <div>￥100.00</div>
-                                            </td>
-                                            <td>
-                                                <div class="xg">限购&nbsp;<i>红酒</i>&nbsp;商品</div>
-                                            </td>
-                                            <td>
-                                                <div>2015-04-01至2015-04-16</div>
-                                            </td>
-                                            <td>
-                                                <div class="from">
-                                                    <a href="javascript:">查看来源</a>
-                                                    <span>
-                                                        <i></i>
-                                                        积分兑换
-                                                    </span>
-                                                </div>
-                                                <div>
-                                                    <a href="#">去购物></a>
-                                                </div>
-                                                <div class="del">
-                                                    <a href="javascript:">删除</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                                <div class="ftx-04">满60元可用</div>
+                                                <div class="ftx-03">有效期至2015-04-16 23:59:00</div>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                            <div class="p-change">
+                                                <span class="num">100 </span>积分
+                                                <span class="ext-num ftx-03"><span class="num">16</span>人兑换</span>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                            <div class="p-change-op">
+                                                <a class="btn-3" href="javascript:">立即兑换</a>
+                                                <span class="exc-jag"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 兑换所需积分 -->
+                                    <input type="hidden" id="Integral" value="200" />
+                                    <!-- 优惠券类别 -->
+                                    <input type="hidden" id="Cate" value="意大利皮包" />
+                                    <!-- 面值 -->
+                                    <input type="hidden" id="Par" value="20元" />
+                                    <!-- 使用条件 -->
+                                    <input type="hidden" id="Condition" value="200元" />
+                                    <!-- 使用有效期 -->
+                                    <input type="hidden" id="Valid" value="2016-04-16 23:59:00" />
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <!--定义结束-->
+        </div>
+
+        <!-- 兑换弹出层 -->
+        <div id="dialog">
+            <div class="ui-dialog-content ui-dialog">
+                <div class="tip-box warn-box">
+                    <h3 class="ftx-04">您正在使用<span class="integral"></span>个积分 兑换<br>1张<i class="cate"></i>专场<span><i class="par"></i>优惠券</span><span class="ftx-16">（满<i class="condition"></i>减<i class="par"></i>）</span></h3>
+                    <div class="box-cont">
+                        <p class="ftx-03">
+                            有效期至<i class="valid"></i>
+                            <br>每个ID限领1张<br>本活动为概率性事件，不能保证所有客户成功兑换优惠券
+                        </p>
+                    </div>
+                    <div class="op-btns">
+                        <a href="javascript:;" class="comfexge btn-9">确定</a>
+                        <a href="javascript:;" class="btn-9 ml10 cancel">取消</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

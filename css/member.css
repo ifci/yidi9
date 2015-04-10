@@ -636,11 +636,11 @@ body, .tel, .search .search_sub {
 .settleup .shopping b {
   font-family: Arial; }
 
-#top .lh i, .tel em, .settleup i, .settleup .shopping, .settleup .shopping b, .ydmBar .ydmBar_ac > a i, .ydmBar .ydmBar_cart .ydmBar_cart_con i, .ydmBar .ydmBar_cart .ydmBar_cart_con span, .ydmBar .ydmBar_login em, .ydmBar .ydmBar_login .ydmBar_login_con span, #footer .footer_cn i, #footer .footer_license i {
+#top .lh i, .tel em, .settleup i, .settleup .shopping, .settleup .shopping b, .ydmBar .ydmBar_ac > a i, .ydmBar .ydmBar_cart .ydmBar_cart_con i, .ydmBar .ydmBar_cart .ydmBar_cart_con span, .ydmBar .ydmBar_login em, .ydmBar .ydmBar_login .ydmBar_login_con span, #footer .footer_cn i, #footer .footer_license i, .yhq .bd table .from i, .exc_t a i {
   background-image: url(../images/icon.png);
   background-repeat: no-repeat; }
 
-#top .lh i, .tel em, .settleup i, .settleup span:after, .ydmBar .ydmBar_ac > a i, .ydmBar .ydmBar_cart .ydmBar_cart_con, .ydmBar .ydmBar_cart .ydmBar_cart_con i, .ydmBar .ydmBar_cart .ydmBar_cart_con em, .ydmBar .ydmBar_cart .ydmBar_cart_con span, #footer .footer_cn, #footer .footer_cn i, #footer .footer_fw, #footer .footer_nav ul, #footer .footer_license, #footer .footer_license i, .paging a, .paging span, #user-info .info-m .u-rank i, .wdjb_ul li i {
+#top .lh i, .tel em, .settleup i, .settleup span:after, .ydmBar .ydmBar_ac > a i, .ydmBar .ydmBar_cart .ydmBar_cart_con, .ydmBar .ydmBar_cart .ydmBar_cart_con i, .ydmBar .ydmBar_cart .ydmBar_cart_con em, .ydmBar .ydmBar_cart .ydmBar_cart_con span, #footer .footer_cn, #footer .footer_cn i, #footer .footer_fw, #footer .footer_nav ul, #footer .footer_license, #footer .footer_license i, .paging a, .paging span, #user-info .info-m .u-rank i, .wdjb_ul li i, .exc_t a i {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -649,22 +649,25 @@ body, .tel, .search .search_sub {
 #top, #header, #content, #footer {
   min-width: 1200px; }
 
-.yhq .hd {
+.yhq .hd, .exc_c, .exc_c .item {
   zoom: 1; }
-  .yhq .hd:after {
+  .yhq .hd:after, .exc_c:after, .exc_c .item:after {
     content: ".";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden; }
 
-#user-info .info-m .u-rank, #user-info .info-m .u-score, .stepflex dl, .safe-icon-box .m-icon, .safe-icon-box .fore, .sflex .item .label, .wdjf_dt .hd li, .wdjb_ul li, .yhq .hd li {
+#user-info .info-m .u-rank, #user-info .info-m .u-score, .stepflex dl, .safe-icon-box .m-icon, .safe-icon-box .fore, .sflex .item .label, .wdjf_dt .hd li, .wdjb_ul li, .yhq .hd ul, .yhq .hd li, .exc_t h3, .exc_t a, .exc_c li, .exc_c .item_l, .exc_c .sign {
   float: left; }
 
-.ydmBar .ydmBar_ac, .ydmBar .ydmBar_cart .ydmBar_cart_con, .ydmBar .ydmBar_tip, .ydmBar .ydmBar_login .ydmBar_login_con, .wdjb_ul {
+.yhq .hd .add, .exc_c .item_r {
+  float: right; }
+
+.ydmBar .ydmBar_ac, .ydmBar .ydmBar_cart .ydmBar_cart_con, .ydmBar .ydmBar_tip, .ydmBar .ydmBar_login .ydmBar_login_con, .wdjb_ul, .yhq .bd table .from, .exc_c .item_r {
   position: relative; }
 
-.ydmBar .ydmBar_cart .ydmBar_cart_bor, .ydmBar .ydmBar_bt, .ydmBar .ydmBar_tip em, .ydmBar .ydmBar_login, .ydmBar .ydmBar_login em, .ydmBar .ydmBar_login .ydmBar_login_con span, .ydmBar .ydmBar_qc, .ydmBar .ydmBar_qc img, .ydmBar .ydmBar_qc .ydmBar_tri, #nav .mod_cate_hd, .wdjb_ul .line {
+.ydmBar .ydmBar_cart .ydmBar_cart_bor, .ydmBar .ydmBar_bt, .ydmBar .ydmBar_tip em, .ydmBar .ydmBar_login, .ydmBar .ydmBar_login em, .ydmBar .ydmBar_login .ydmBar_login_con span, .ydmBar .ydmBar_qc, .ydmBar .ydmBar_qc img, .ydmBar .ydmBar_qc .ydmBar_tri, #nav .mod_cate_hd, .wdjb_ul .line, .yhq .bd table .from span, .yhq .bd table .from i {
   position: absolute; }
 
 .warpper {
@@ -3763,6 +3766,10 @@ a.wopj_bt {
       .yhq .hd li.on a {
         color: #ff000a;
         font-weight: bold; }
+  .yhq .hd .add {
+    margin-top: 10px; }
+    .yhq .hd .add a {
+      color: #005ea7; }
   .yhq .hd a {
     color: #666; }
     .yhq .hd a:hover {
@@ -3776,9 +3783,14 @@ a.wopj_bt {
     .yhq .bd table thead {
       background: #f5f5f5;
       color: #333; }
-    .yhq .bd table td {
-      border: 1px solid #f5f5f5;
-      padding: 5px; }
+      .yhq .bd table thead td {
+        padding: 5px; }
+    .yhq .bd table tbody {
+      border: 1px solid #f5f5f5; }
+      .yhq .bd table tbody tr:first-child {
+        text-align: left; }
+    .yhq .bd table .num {
+      padding: 10px 0 0 20px; }
     .yhq .bd table a {
       color: #005ea7;
       line-height: 1.8; }
@@ -3793,5 +3805,226 @@ a.wopj_bt {
     .yhq .bd table i {
       color: #666;
       font-weight: bold; }
+    .yhq .bd table .from span {
+      display: none;
+      width: 100%;
+      top: 24px;
+      left: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      -webkit-box-shadow: 0 0 2px 2px #eee;
+      -moz-box-shadow: 0 0 2px 2px #eee;
+      box-shadow: 0 0 2px 2px #eee;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      padding: 10px 0; }
+    .yhq .bd table .from i {
+      width: 16px;
+      height: 8px;
+      background-position: -27px -32px;
+      top: -8px;
+      left: 32px; }
+
+/* 兑换优惠券 */
+.exc {
+  padding-top: 70px; }
+
+.exc_t {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  line-height: 22px; }
+  .exc_t > div {
+    height: 36px;
+    padding-top: 14px; }
+  .exc_t > div:first-child {
+    border-bottom: 1px dotted #ccc; }
+  .exc_t h3 {
+    width: 80px;
+    text-align: right;
+    font-weight: bold; }
+  .exc_t a {
+    margin-right: 20px;
+    padding: 0 6px; }
+    .exc_t a.curr {
+      background: #d6d6d6;
+      color: #666; }
+    .exc_t a i {
+      width: 8px;
+      height: 6px;
+      margin: -4px 0 0 3px; }
+  .exc_t .up i {
+    background-position: -36px -17px; }
+  .exc_t .up:hover i {
+    background-position: -36px -25px; }
+  .exc_t .down i {
+    background-position: -36px -8px; }
+  .exc_t .down:hover i {
+    background-position: -36px 0; }
+
+.exc_c ul {
+  width: 760px; }
+.exc_c li {
+  width: 357px;
+  margin-right: 20px; }
+.exc_c .item {
+  display: block;
+  border: 1px dotted #c19667;
+  position: relative;
+  margin: 30px 0 0; }
+.exc_c .item_l {
+  text-align: center;
+  width: 160px;
+  padding-bottom: 10px; }
+  .exc_c .item_l p {
+    padding: 15px 0 10px 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px; }
+.exc_c .item_r {
+  width: 194px;
+  background: #ffe8d5; }
+.exc_c .limit {
+  position: relative;
+  background: #ffe8d5;
+  padding: 10px 0 0 10px;
+  height: 87px;
+  overflow: hidden; }
+.exc_c .worth {
+  font-family: arial;
+  color: #ff6c00;
+  font-size: 40px;
+  line-height: 40px; }
+.exc_c .sign {
+  font-family: verdana;
+  font-size: 30px; }
+.exc_c .ftx-03 {
+  color: #999;
+  margin-top: 10px; }
+.exc_c .ftx-04 {
+  color: #ff6c00; }
+.exc_c .p-change {
+  position: relative;
+  background: #fff6ee;
+  padding: 5px 0 10px 10px;
+  height: 34px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6c00;
+  line-height: 18px;
+  padding-bottom: 5px; }
+  .exc_c .p-change .exc-jag {
+    background-position: 0 -105px; }
+.exc_c .num {
+  font-family: verdana; }
+.exc_c .ext-num {
+  display: block;
+  font-family: normal;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 0; }
+.exc_c .exc-jag {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background: url(http://misc.360buyimg.com/vip/2014/css/i/exc.png) -11px 0 repeat-y; }
+.exc_c .p-change-op {
+  position: relative;
+  background: #ffe8d5;
+  padding: 12px 0 14px 15px; }
+.exc_c .btn-3 {
+  font-family: arial,"microsoft yahei";
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  background-color: #ff8400;
+  background-image: -moz-linear-gradient(top, #ff8400, #ff9d35);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff8400), color-stop(1, #ff9d35));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8400',endColorstr='#ff9d35',GradientType='0');
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8400',endColorstr='#ff9d35');
+  background-image: linear-gradient(to top, #ff8400 0, #ff9d35 100%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 28px;
+  vertical-align: middle;
+  cursor: pointer; }
+.exc_c .btn-3:hover {
+  background-color: #ff6200;
+  background-image: -moz-linear-gradient(top, #ff6200, #ff8523);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff6200), color-stop(1, #ff8523));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6200',endColorstr='#ff8523',GradientType='0');
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6200',endColorstr='#ff8523');
+  background-image: linear-gradient(to top, #ff6200 0, #ff8523 100%); }
+
+.ui-dialog-content {
+  padding: 10px;
+  overflow: auto;
+  background: #fff; }
+
+.ui-dialog .tip-box {
+  padding: 10px 0 10px 60px;
+  margin: 15px 30px 0;
+  min-height: 48px;
+  _height: 48px; }
+
+.ui-dialog .ftx-04 {
+  font-size: 18px;
+  margin: 0 0 5px;
+  line-height: 25px;
+  font-weight: normal;
+  color: #ff6c00; }
+
+.ui-dialog .tip-box .box-cont {
+  line-height: 25px;
+  margin-top: 5px;
+  color: #999; }
+
+.ui-dialog .op-btns {
+  margin: 20px 0 0; }
+
+.btn-9, .gray-btn {
+  font-family: arial,"microsoft yahei";
+  border: 1px solid #ddd;
+  cursor: pointer;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  display: inline-block;
+  height: 19px;
+  line-height: 19px;
+  background-color: #f2f2f2;
+  background-image: -moz-linear-gradient(top, #f2f2f2, #f7f7f7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2f2f2), color-stop(1, #f7f7f7));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2',endColorstr='#f7f7f7',GradientType='0');
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2',endColorstr='#f7f7f7');
+  background-image: linear-gradient(to top, #f2f2f2 0, #f7f7f7 100%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #323333;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 9px;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 2px 15px; }
+
+.ui-dialog .warn-box {
+  background: url(http://misc.360buyimg.com/vip/2014/css/i/warn.png) left 5px no-repeat; }
+
+#dialog {
+  display: none; }
 
 /*# sourceMappingURL=member.css.map */

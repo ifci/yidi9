@@ -5,14 +5,14 @@
  * @DateTime: 2015-03-10 16:52:02
  */
 
-(function($){
-	$.fn.extend({
+ (function($){
+ 	$.fn.extend({
 		// coffee方法,事件管理
 		coffee: function(obj){
-		    for(var eName in obj)
-		    for(var selector in obj[eName])
-		        $(this).on(eName, selector, obj[eName][selector]);
-		},
+			for(var eName in obj)
+				for(var selector in obj[eName])
+					$(this).on(eName, selector, obj[eName][selector]);
+			},
 		// 返回顶部
 		bTop: function(){
 			this.click(function() {
@@ -131,30 +131,30 @@ $(function(){
 		mtcalc();
 	});
 	$('.ydmBar').coffee({
-        click: {
-        	'.ydmBar_un': function(){
-                var tTop = $(this).position().top;
+		click: {
+			'.ydmBar_un': function(){
+				var tTop = $(this).position().top;
 				var loGin = $(".ydmBar_login");
 				loGin.fadeIn().css('top', tTop);
 
-            },
-            '.ydmBar_login_con span': function(){
+			},
+			'.ydmBar_login_con span': function(){
 				$(this).siblings('input').val('');
-            },
-            '.ydmBar_login_con input': function(){
-            	$this = $(this);
+			},
+			'.ydmBar_login_con input': function(){
+				$this = $(this);
 				var setIn = setInterval(function(){
 					if($this.val().length > 0){
-			        	$this.siblings("span").show();
-			        }else{
-			        	$this.siblings("span").hide();
-			        }
-		        }, 500);
+						$this.siblings("span").show();
+					}else{
+						$this.siblings("span").hide();
+					}
+				}, 500);
 			},
 			'.ydmBar_close': function(){
 				$(".ydmBar_login").hide();
 			}
-        }
+		}
 	});
 	$('.ydmBar').hover(function(){
 		return false;
@@ -170,8 +170,8 @@ $(function(){
 		$(this).find('.tit').toggle();
 	});
 	$(".tit > li").hover(function(){
-        var subTop = $(this).position().top;
-        $(".tit li").find(".mod_subcate").stop(true).animate({top:subTop},400);
+		var subTop = $(this).position().top;
+		$(".tit li").find(".mod_subcate").stop(true).animate({top:subTop},400);
 		$(this).toggleClass('on').find('.mod_subcate').toggle();
 	});
 	$(".article").tabs({
@@ -182,22 +182,22 @@ $(function(){
 
 	//退货数量加减
 	$(".n-left").bind('click', function(event) {  //可退数量
-	    var istext = $(this).siblings(".n-num");
+		var istext = $(this).siblings(".n-num");
 	    // 退货数量最少为1
 	    if(istext.val() > 1){
-	        istext.val(parseInt(istext.val()) - 1);
+	    	istext.val(parseInt(istext.val()) - 1);
 	    }else{
-	        return false;
+	    	return false;
 	    }
 	});
 	$(".n-right").bind('click', function(event) {
-	    var isNum = $(this).parent().siblings(".p-isNum").text();
-	    var istext = $(this).siblings(".n-num");
+		var isNum = $(this).parent().siblings(".p-isNum").text();
+		var istext = $(this).siblings(".n-num");
 	    // 退货数量不超过可退数量
 	    if(parseInt(isNum) > istext.val()){
-	        istext.val(parseInt(istext.val()) + 1);
+	    	istext.val(parseInt(istext.val()) + 1);
 	    }else{
-	        return false;
+	    	return false;
 	    }
 	});
 
@@ -210,4 +210,52 @@ $(function(){
 	$(".wdjf_dt").tabs({
 		bd: '.bd > div'
 	});
+
+	/*优惠券*/
+	$('.yhq').tabs({
+		'bd': '.bd > div'
+	});
+	$('.from a,.from span').hover(function(){
+		$(this).parent().children('span').show();
+	},function(){
+		$(this).parent().children('span').hide();
+	});
+
+	/*删除优惠券*/
+	$('.yhq .del').on('click', function(event) {
+		popup.confirm('确定要删除此优惠劵吗？删除后将无法恢复','意帝酒业');
+	});
+
+	$('.p-change-op').on('click', 'a', function(event) {
+		var t = $(this).parents('li');
+		var dialog = $("#dialog");
+		var integral = $("#Integral", t).val();
+		var cate = $("#Cate", t).val();
+		var par = $("#Par", t).val();
+		var condition = $("#Condition", t).val();
+		var valid = $("#Valid", t).val();
+		var Coupon = {
+			integral : integral,
+			cate : cate,
+			par : par,
+			condition : condition,
+			valid : valid
+		};
+		$('.integral', dialog).html(integral);
+		$('.cate', dialog).html(cate);
+		$('.par', dialog).html(par);
+		$('.condition', dialog).html(condition);
+		$('.valid', dialog).html(valid);
+		asyncbox.html({
+			content : document.getElementById("dialog"),
+			id : 'p-layer'
+		});
+	});
+
+	$("body").delegate('.cancel', 'click', function(event) {
+		asyncbox.close('p-layer');
+	});
+
+
+
 })
